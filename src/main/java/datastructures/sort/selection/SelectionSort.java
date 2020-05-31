@@ -10,21 +10,22 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 4, 4, 2, 3, 8, 9, 1};
+
+        //外层循环 步长++
         for (int i = 0; i < arr.length; i++) {
-            //minPos 随着每一轮的循环 i的变化进行初始化
-            int minPos = i;
+            int elementIndex = i;
+            //内层需要找到最小的元素下标
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[minPos] > arr[j]) {
-                    //找到最小的下标
-                        minPos = j;
+                //先找到最小元素的下标
+                if (arr[elementIndex] > arr[j]) {
+                    elementIndex = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[minPos];
-            arr[minPos] = temp;
+            //进行元素交换 把最小的元素放到数组的第一位置 第二个小的...
+            int temp = arr[elementIndex];
+            arr[elementIndex] = arr[i];
+            arr[i] = temp;
         }
-
-
         System.out.println(Arrays.toString(arr));
 
 
