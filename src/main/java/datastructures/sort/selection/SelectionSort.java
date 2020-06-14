@@ -10,19 +10,33 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 4, 4, 2, 3, 8, 9, 1};
-        for (int i = 0; i < arr.length; i++) {
-            int minPos = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[minPos] > arr[j]) {
-                    minPos = j;
-                }
-            }
-            int tmmep = arr[minPos];
-            arr[minPos] = arr[i];
-            arr[i] = tmmep;
-        }
-        System.out.println(Arrays.toString(arr));
+//        for (int i = 0; i < arr.length; i++) {
+//            int minPos = i;
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[minPos] > arr[j]) {
+//                    minPos = j;
+//                }
+//            }
+//            int tmmep = arr[minPos];
+//            arr[minPos] = arr[i];
+//            arr[i] = tmmep;
+//        }
+//        System.out.println(Arrays.toString(arr));
 
+    for(int i=0;i<arr.length;i++){
+        //复习
+        int minIndex = i;
+        for(int j = i+1 ;j<arr.length; j++){
+            if(arr[minIndex]>arr[j]){
+                minIndex=j;
+            }
+        }
+        int temp1 = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp1;
+
+    }
+        System.out.println(Arrays.toString(arr));
 
     }
 }
