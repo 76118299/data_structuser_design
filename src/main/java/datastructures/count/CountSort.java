@@ -34,6 +34,15 @@ public class CountSort {
         }
         System.out.println(Arrays.toString(result));
 
+        for(int i=0;i<arr.length;i++){
+            count[arr[i]]++;
+        }
+        for(int i=0, j=0; i<count.length; i++){
+            while (count[i]-->0){
+                result[j++] = i;
+            }
+        }
+
     }
 
 
