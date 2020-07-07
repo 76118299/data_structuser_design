@@ -1,6 +1,7 @@
 package design.builder;
 
 public class User {
+
     public String getName() {
         return Name;
     }
@@ -28,6 +29,8 @@ public class User {
     private String Name;
     private int age;
     private String mobile;
+    //构造器私有
+    private User(){}
 
     /**
      * user 构造器
