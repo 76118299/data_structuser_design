@@ -50,8 +50,11 @@ public class SinglyLinkedListExercie {
             while (p.next != null){
                 p = p.next;
             }
-            newNode.next = p.next;
+            //如果是中间的节点必须有这句代码
+            newNode.next = p.next; //这个是从头开始的
             p.next = newNode;
+
+
         }
     }
     //某个节点之后插入新节点
@@ -60,6 +63,7 @@ public class SinglyLinkedListExercie {
             return;
         }
         newNode.next = p.next;
+        //如果先执行这句 p.next 丢了
         p.next = newNode;
     }
     //某个节点之前
