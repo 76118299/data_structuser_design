@@ -1,6 +1,4 @@
-package datastructures.quick;
-
-import java.util.Arrays;
+package datastructures.sort.quick;
 
 /**
  * 快速排序

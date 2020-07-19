@@ -30,7 +30,7 @@ public class User {
     private int age;
     private String mobile;
     //构造器私有
-    private User(){}
+    User(){}
 
     /**
      * user 构造器

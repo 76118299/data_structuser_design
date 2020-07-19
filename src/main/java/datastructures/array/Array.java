@@ -39,8 +39,8 @@ public class Array {
             /**
              * 合适的位置
              */
-            for (int i = count; i > index; i--) {
-                data[i - 1] = data[i];
+            for (int i = count; i > index; --i) {
+                data[i] = data[i - 1];
             }
             data[index] = value;
             ++count;
