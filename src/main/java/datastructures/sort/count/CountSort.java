@@ -1,4 +1,4 @@
-package datastructures.count;
+package datastructures.sort.count;
 
 import java.util.Arrays;
 
