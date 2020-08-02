@@ -57,6 +57,16 @@ public class MergeSort {
                 j++;
             }
         }
+        //判断子数组是否有剩余的
+        int start = i;
+        int end = q;
+        if(j<=r){ //判断的是第二个数组
+            start = j;
+            end = r;
+        }
+        while (start<=end){ //判断的是第一个数组
+            tmp[k++] = a[start++];
+        }
 
     }
 }
