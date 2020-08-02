@@ -58,8 +58,10 @@ public class CountSort {
         }
         for(int i=arr.length-1;i>=0;i--){ //arr【】就是count的下标
             /**
-             * 例如：arr[7] 那么对应的count[8],我们把8取出来进行-1操作
-             * 然后放入ret 最终数组第7的下标位置上 把arr【i】的值
+             * 1.count的下标值就是arr【i】。我们要排序的数组的值。
+             * 2.通过arr【i】的下标 。取出数组count，下标位arr【i】的值 （即下面代码c的值）。
+             * 3.那么arr【i】就会存入，ret数组，下标位c的位置。
+             * 以上就是计数排序的基本思想。
              */
             int c = count[arr[i]];
             int c1 = --c;
