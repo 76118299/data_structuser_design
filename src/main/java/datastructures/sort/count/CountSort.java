@@ -64,8 +64,10 @@ public class CountSort {
              * 3.那么arr【i】就会存入，ret数组，下标位c的位置。
              * 以上就是计数排序的基本思想。
              */
+            //取值arr【i】 的位置c
             int c = count[arr[i]];
             int c1 = --c;
+            //将arr【i】存入c的位置上
             ret[c1] = arr[i];
         }
     }
