@@ -8,6 +8,7 @@ package datastructures.sort.quick;
  * 双轴快排
  * 两个轴 比第一个轴小的放左边，比第一个轴大的放右边。
  * 第二个轴类似
+ * 快速排序是 两端和轴进行比较
  */
 public class QuickSort {
     public static void main(String[] args) {
@@ -31,7 +32,9 @@ public class QuickSort {
         int left = leftBound;
         int rgiht= rightBound;
         while (left < rgiht){
+            //找到比轴大的
             while (arr[left]<=pivot) left++;
+            //找到比轴小的
             while (arr[rgiht]>=pivot) rgiht--;
             int temp = arr[left];
             arr[left] = arr[rgiht];

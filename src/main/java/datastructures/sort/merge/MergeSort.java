@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 两个有序数组进行 合并排序
+ * 两个有序数组进行 合并到第三个数组中
+ * 两个有序数组进行比较合并到第三个数组中
  */
 public class MergeSort {
     public static void main(String[] args) {
