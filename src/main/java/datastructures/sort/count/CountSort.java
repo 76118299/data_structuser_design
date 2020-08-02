@@ -44,6 +44,25 @@ public class CountSort {
         }
 
     }
+    public void countSort(int[] arr){
+        int[] count=new int[arr.length];
+        int[] ret=new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            count[arr[i]]++;
+        }
+        for(int m = 1;m<count.length;m++){
+            count[m] = count[m]+count[m-1];
+        }
+        for(int i=arr.length-1;i>=0;i--){ //arr【】就是count的下标
+            /**
+             * 例如：arr[7] 那么对应的count[8],我们把8取出来进行-1操作
+             * 然后放入ret 最终数组第7的下标位置上 把arr【i】的值
+             */
+            int c = count[arr[i]];
+            int c1 = --c;
+            ret[c1] = arr[i];
+        }
+    }
 
 
 
