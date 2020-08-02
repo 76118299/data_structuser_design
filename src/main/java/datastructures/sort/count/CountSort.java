@@ -51,7 +51,8 @@ public class CountSort {
             count[arr[i]]++;
         }
         /**
-         * 累加数组：例如：count[1,3,5,6] 那么就是 下标1 ，会出现在最终数组的 第3个位置上
+         * 累加数组：例如：count[1,3,5,6] 那么就是 下标1 ，会出现在最终数组的 第3个位置上，
+         * 下标2会出现最终数组第5的位置，下标3会出现在数组第6个位置上
          */
         for(int m = 1;m<count.length;m++){
             count[m] = count[m]+count[m-1];
