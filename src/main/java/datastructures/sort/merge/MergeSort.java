@@ -28,4 +28,35 @@ public class MergeSort {
         }
 
     }
+    public void mergeSortRecursion(int[] a,int p,int r){
+        if(p>r){
+            return;
+        }
+        int q = p + (r - p) / 2;
+        mergeSortRecursion(a,p,q);
+        mergeSortRecursion(a,q+1,r);
+        merge(a,p,q,r);
+
+    }
+
+    private void merge(int[] a, int p, int q, int r) {
+        int i=p;
+        int j=q+1;
+        int k=0;
+        int [] tmp = new int[r-p+1];
+        while (i<=p&&j<=r){
+            if(a[i]>a[j]){
+               // tmp[k++] = a[i++];
+                tmp[k] = a[i];
+                k++;
+                i++;
+            }else {
+               // tmp[k++] = a[j++];
+                tmp[k] = a[j];
+                k++;
+                j++;
+            }
+        }
+
+    }
 }
