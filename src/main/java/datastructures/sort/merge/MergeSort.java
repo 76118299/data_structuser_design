@@ -30,12 +30,16 @@ public class MergeSort {
 
     }
     public void mergeSortRecursion(int[] a,int p,int r){
+        //如果符合条件则返回。 进行 归操作。
         if(p>r){
             return;
         }
+        // 不符合上面的条件继续进行。 递操作
+        //数组拆分
         int q = p + (r - p) / 2;
         mergeSortRecursion(a,p,q);
         mergeSortRecursion(a,q+1,r);
+        //归操作进行合并有序数组
         merge(a,p,q,r);
 
     }
