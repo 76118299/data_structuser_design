@@ -25,6 +25,24 @@ public class QuickSort {
             return;
         }
         partition(arr,leftBound,rightBound);
+        partition2(arr,leftBound,rightBound);
+    }
+
+    private static void partition2(int[] arr, int leftBound, int rightBound) {
+        int pivot = arr[rightBound];
+        int left = leftBound;
+        int right = rightBound;
+        while (left<right){
+            while (arr[left]<=pivot) left++;
+            while (arr[right]>=pivot)right--;
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+        }
+        //将轴的位置和
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
     }
 
     private static void partition(int[] arr, int leftBound, int rightBound) {
@@ -45,6 +63,8 @@ public class QuickSort {
         arr[left] = arr[rgiht];
         arr[rgiht] = temp;
     }
+
+
 
 
 }
